@@ -14,6 +14,13 @@ const socials = {
   github: "https://github.com/VasilkaVlaykova",
 };
 
+const projectLinks = {
+  scamLens: "https://github.com/VasilkaVlaykova/ScamLens-Web-Browser-Application-for-Detecting-Spam-Contents",
+  kompas: "https://github.com/VasilkaVlaykova/Online-Book-Store-Kompas",
+  lima: "https://github.com/VasilkaVlaykova/LIMA-Library-Intelligence-Managemant-Assistant",
+  gitLearning: "https://github.com/VasilkaVlaykova/git-learning",
+};
+
 function SocialLinks({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`social-links${compact ? " social-links--compact" : ""}`}>
@@ -54,25 +61,23 @@ function GeometricLines() {
   );
 }
 
-function PortraitPlaceholder() {
+function HeroPortrait() {
   return (
-    <figure className="portrait-figure" aria-label="Abstract portrait placeholder; no photograph has been supplied">
-      <div className="portrait-backdrop" />
+    <figure className="portrait-figure">
+      <div className="portrait-backdrop" aria-hidden="true" />
       <span className="portrait-watermark" aria-hidden="true">VV</span>
-      <svg className="portrait-shape" viewBox="0 0 430 590" role="img" aria-labelledby="portrait-title portrait-description">
-        <title id="portrait-title">Portrait placeholder</title>
-        <desc id="portrait-description">An abstract, faceless silhouette reserved for Vasilka's portrait when she chooses to add one.</desc>
-        <path d="M66 568c9-83 28-128 80-156 23-13 39-22 43-40l2-28c-31-22-50-58-50-105V205c0-82 37-127 86-127s87 45 87 127v34c0 47-19 83-51 105l3 28c4 18 20 27 43 40 51 28 70 73 79 156H66Z" fill="#151311" />
-        <path d="M140 234c15-81 31-136 87-157 57 22 76 76 90 157" fill="none" stroke="#d52f20" strokeWidth="2" />
-        <path d="M106 519c44-37 77-52 122-52s78 15 122 52" fill="none" stroke="#ffe5e3" strokeWidth="1.5" opacity=".62" />
-        <path d="m203 374 24 30 24-30" fill="none" stroke="#ffe5e3" strokeWidth="1.5" opacity=".72" />
-      </svg>
+      <img
+        className="portrait-image"
+        src="/manus-storage/async-images/ma7wkjDwavnnsXoN9sbyPk/image-1.webp"
+        alt="AI-generated editorial portrait of a fictional woman wearing a black hijab; not a photo of Vasilka."
+        fetchPriority="high"
+        decoding="async"
+      />
       <figcaption className="portrait-caption">
         <span className="caption-rule" />
-        <span>Portrait to be added</span>
-        <span className="caption-index">01 / 01</span>
+        <span>AI-generated portrait</span>
       </figcaption>
-      <span className="portrait-side-note" aria-hidden="true">A SPACE FOR A PORTRAIT</span>
+      <span className="portrait-side-note">FICTIONAL MODEL · NOT VASILKA</span>
     </figure>
   );
 }
@@ -146,6 +151,7 @@ const projects = [
     technologies: ["Python", "Machine Learning", "Streamlit"],
     kind: "scamlens",
     className: "project--wide",
+    repoUrl: projectLinks.scamLens,
   },
   {
     number: "02",
@@ -154,6 +160,7 @@ const projects = [
     technologies: ["MySQL", "SQL", "Database Design"],
     kind: "kompas",
     className: "project--narrow",
+    repoUrl: projectLinks.kompas,
   },
   {
     number: "03",
@@ -162,6 +169,7 @@ const projects = [
     technologies: [],
     kind: "lima",
     className: "project--narrow",
+    repoUrl: projectLinks.lima,
   },
   {
     number: "04",
@@ -170,6 +178,7 @@ const projects = [
     technologies: ["Git", "GitHub"],
     kind: "git",
     className: "project--wide",
+    repoUrl: projectLinks.gitLearning,
   },
 ];
 
@@ -186,6 +195,9 @@ function Project({ project }: { project: (typeof projects)[number] }) {
             {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
           </ul>
         )}
+        <a className="project-repo-link" href={project.repoUrl} target="_blank" rel="noreferrer">
+          <Github aria-hidden="true" /> View repository <ArrowUpRight aria-hidden="true" />
+        </a>
       </div>
     </article>
   );
@@ -294,10 +306,11 @@ function Home() {
             <div className="hero-actions">
               <a className="button button--dark" href="#work">Explore My Work <ArrowDown aria-hidden="true" /></a>
               <a className="button button--text" href="#contact">Let's Connect <ArrowUpRight aria-hidden="true" /></a>
+              <a className="button button--outline" href={projectLinks.scamLens} target="_blank" rel="noreferrer"><Github aria-hidden="true" />ScamLens on GitHub <ArrowUpRight aria-hidden="true" /></a>
             </div>
             <div className="hero-footnote"><span>COMPUTING · DATA · CURIOSITY</span><span>01 — 07</span></div>
           </div>
-          <div className="hero-portrait-wrap"><PortraitPlaceholder /></div>
+          <div className="hero-portrait-wrap"><HeroPortrait /></div>
           <a className="hero-scroll" href="#about" aria-label="Scroll to about me"><span>SCROLL TO EXPLORE</span><ArrowDown aria-hidden="true" /></a>
         </section>
 

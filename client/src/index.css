@@ -79,6 +79,8 @@ a { color: inherit; text-decoration: none; }
 .button svg { width: 15px; height: 15px; stroke-width: 1.65; }
 .button--dark { color: white; background: var(--ink); }
 .button--dark:hover { background: var(--red); }
+.button--outline { gap: 9px; border: 1px solid var(--line); color: var(--ink); background: #fff; }
+.button--outline:hover { border-color: var(--red); color: var(--red); }
 .button--text { padding: 0 5px; color: var(--ink); }
 .button--text svg { color: var(--red); }
 .button--text:hover { color: var(--red); }
@@ -88,7 +90,7 @@ a { color: inherit; text-decoration: none; }
 .portrait-backdrop { position: absolute; top: 13%; right: 5%; width: 79%; height: 76%; background: linear-gradient(138deg, #faf9f7 0 53%, #ffe5e3 53% 100%); clip-path: polygon(28% 0, 100% 6%, 88% 100%, 0 88%); }
 .portrait-backdrop::after { position: absolute; top: 14%; right: 9%; bottom: 11%; left: 11%; border: 1px solid rgb(17 17 17 / 13%); content: ""; }
 .portrait-watermark { position: absolute; z-index: 1; top: 22%; right: 2%; color: rgb(213 47 32 / 19%); font-family: var(--serif); font-size: clamp(100px, 16vw, 230px); font-weight: 600; letter-spacing: -.11em; line-height: .8; }
-.portrait-shape { position: absolute; z-index: 2; right: 3%; bottom: -1px; width: 87%; height: 94%; overflow: visible; filter: drop-shadow(10px 7px 0 rgb(17 17 17 / 3%)); }
+.portrait-image { position: absolute; z-index: 2; right: 3%; bottom: 0; width: 94%; height: 98%; object-fit: contain; object-position: bottom center; filter: drop-shadow(10px 7px 0 rgb(17 17 17 / 3%)); }
 .portrait-caption { position: absolute; z-index: 4; right: 0; bottom: 32px; display: flex; align-items: center; gap: 9px; color: #615b56; font-size: 9px; font-weight: 600; letter-spacing: .11em; text-transform: uppercase; }
 .caption-rule { display: block; width: 24px; height: 1px; background: var(--red); }
 .caption-index { margin-left: 12px; color: #9e9790; }
@@ -191,6 +193,10 @@ a { color: inherit; text-decoration: none; }
 .project-copy p { max-width: 520px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 7px 17px; margin: 14px 0 0; padding: 0; list-style: none; }
 .project-tags li { color: #88817a; font-size: 9px; letter-spacing: .045em; }
+.project-repo-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 15px; padding-bottom: 4px; border-bottom: 1px solid #d5cfc9; color: #38332f; font-size: 10px; font-weight: 600; letter-spacing: .025em; transition: color 180ms ease, border-color 180ms ease; }
+.project-repo-link:hover { border-color: var(--red); color: var(--red); }
+.project-repo-link svg { width: 13px; height: 13px; stroke-width: 1.8; }
+.project-repo-link svg:last-child { width: 12px; height: 12px; color: var(--red); }
 .gallery-note { display: flex; align-items: center; gap: 10px; max-width: 1170px; margin: 75px auto 0; padding-top: 17px; border-top: 1px solid var(--line); color: #8b847c; font-size: 10px; letter-spacing: .035em; }
 .gallery-star { color: var(--red); font-size: 15px; }
 
@@ -251,7 +257,7 @@ a { color: inherit; text-decoration: none; }
   .hero-content { width: 64%; }
   .hero h1 { font-size: clamp(110px, 14vw, 160px); }
   .hero-portrait-wrap { right: 1%; width: 40%; height: 79%; min-height: 520px; }
-  .portrait-shape { width: 94%; }
+  .portrait-image { right: 0; width: 98%; }
   .hero-vertical { right: 42%; }
   .project-art { min-height: 275px; }
   .project--narrow .project-art { min-height: 250px; }
@@ -288,7 +294,7 @@ a { color: inherit; text-decoration: none; }
   .hero-portrait-wrap { position: relative; right: auto; bottom: auto; width: min(100%, 490px); height: 480px; min-height: 0; align-self: center; margin: 13px auto 0; }
   .portrait-backdrop { top: 9%; right: 6%; width: 81%; height: 78%; }
   .portrait-watermark { top: 15%; right: 10%; font-size: clamp(130px, 32vw, 200px); }
-  .portrait-shape { right: 8%; width: 83%; height: 94%; }
+  .portrait-image { right: 8%; width: 83%; height: 96%; }
   .portrait-caption { right: 6%; bottom: 14px; }
   .portrait-side-note { top: 39%; right: 4%; }
   .hero-vertical { top: auto; right: 7%; bottom: 10%; font-size: 38px; opacity: .7; }
