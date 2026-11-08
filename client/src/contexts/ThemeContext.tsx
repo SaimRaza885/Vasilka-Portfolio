@@ -4,61 +4,60 @@ type Theme = "light" | "dark";
 
 interface ThemeContextType {
   theme: Theme;
-  toggleTheme?: () => void;
+  toggleTheme: () => void;
   switchable: boolean;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+interface ThemeProviderProps { children: React.ReactNode; defaultTheme?: Theme; switchable?: boolean }
 
-interface ThemeProviderProps {
-  children: React.ReactNode;
-  defaultTheme?: Theme;
-  switchable?: boolean;
+function readDocumentTheme(defaultTheme: Theme): Theme {
+  if (typeof document === "undefined") return defaultTheme;
+  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 }
 
-export function ThemeProvider({
-  children,
-  defaultTheme = "light",
-  switchable = false,
-}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (switchable) {
-      const stored = localStorage.getItem("theme");
-      return (stored as Theme) || defaultTheme;
-    }
-    return defaultTheme;
-  });
+export function ThemeProvider({ children, defaultTheme = "light", switchable = false }: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(() => readDocumentTheme(defaultTheme));
 
   useEffect(() => {
-    const root = document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
+    if (!switchable) return;
+    let stored: string | null = null;
+    try { stored = window.localStorage.getItem("theme"); } catch { /* Storage may be unavailable. */ }
+    if (stored === "light" || stored === "dark") {
+      setTheme(stored);
+      return;
     }
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const syncWithSystem = () => {
+      try {
+        if (window.localStorage.getItem("theme") === null) setTheme(media.matches ? "dark" : "light");
+      } catch { setTheme(media.matches ? "dark" : "light"); }
+    };
+    syncWithSystem();
+    media.addEventListener("change", syncWithSystem);
+    return () => media.removeEventListener("change", syncWithSystem);
+  }, [switchable]);
 
-    if (switchable) {
-      localStorage.setItem("theme", theme);
-    }
-  }, [theme, switchable]);
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#171614" : "#ffffff");
+  }, [theme]);
 
-  const toggleTheme = switchable
-    ? () => {
-        setTheme(prev => (prev === "light" ? "dark" : "light"));
+  const toggleTheme = () => {
+    setTheme((previous) => {
+      const next = previous === "light" ? "dark" : "light";
+      if (switchable) {
+        try { window.localStorage.setItem("theme", next); } catch { /* Keep the current choice for this visit. */ }
       }
-    : undefined;
+      return next;
+    });
+  };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, switchable }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, toggleTheme, switchable }}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within ThemeProvider");
-  }
+  if (!context) throw new Error("useTheme must be used within ThemeProvider");
   return context;
 }

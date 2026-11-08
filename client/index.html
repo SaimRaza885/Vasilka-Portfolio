@@ -1,22 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Vasilka Vlaykova is a London-based BSc Computing student exploring Data Science, Artificial Intelligence, and thoughtful system design." />
-    <meta name="keywords" content="Vasilka Vlaykova, Computing student, Data Science, Artificial Intelligence, Machine Learning, London" />
+    <meta name="description" content="Meet Vasilka Vlaykova, a London-based BSc Computing student exploring data science, artificial intelligence, and system design through projects." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vasilka Vlaykova" />
-    <meta property="og:title" content="Vasilka Vlaykova — Computing, Data &amp; AI" />
-    <meta property="og:description" content="A London-based BSc Computing student exploring Data Science, Artificial Intelligence, and thoughtful system design." />
+    <meta property="og:title" content="Vasilka Vlaykova | Computing, Data &amp; AI" />
+    <meta property="og:description" content="A London-based BSc Computing student exploring data science, artificial intelligence, and system design through projects." />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Vasilka Vlaykova — Computing, Data &amp; AI" />
-    <meta name="twitter:description" content="A London-based BSc Computing student exploring Data Science, Artificial Intelligence, and thoughtful system design." />
+    <meta name="twitter:title" content="Vasilka Vlaykova | Computing, Data &amp; AI" />
+    <meta name="twitter:description" content="A London-based BSc Computing student exploring data science, artificial intelligence, and system design through projects." />
     <link rel="icon" type="image/svg+xml" href="/vasilka-mark.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Vasilka Vlaykova — Computing, Data &amp; AI</title>
+    <title>Vasilka Vlaykova | Computing, Data &amp; AI</title>
+    <script>
+      try {
+        const saved = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved === "light" || saved === "dark" ? saved : systemDark ? "dark" : "light";
+        if (document.documentElement.dataset.theme === "dark") {
+          document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#151412");
+        }
+      } catch { /* Keep the default light theme when storage is unavailable. */ }
+    </script>
   </head>
   <body>
     <div id="root"></div>
