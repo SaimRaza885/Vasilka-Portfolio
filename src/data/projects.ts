@@ -1,0 +1,128 @@
+export type Project = {
+  slug: string;
+  number: string;
+  title: string;
+  summary: string;
+  category: string;
+  technologies: string[];
+  repository: string;
+  image?: string;
+  overview: string;
+  details: string[];
+  statusNote?: string;
+  outcome?: string;
+  problem?: string;
+  role?: string;
+  isFeatured?: boolean;
+};
+
+export const projects: Project[] = [
+  {
+    slug: "scamlens",
+    number: "01",
+    title: "ScamLens",
+    summary:
+      "A machine-learning web platform concept for identifying suspicious SMS messages, phishing emails, and malicious URLs.",
+    category: "Machine learning · Streamlit",
+    technologies: [
+      "Python",
+      "Machine Learning",
+      "NLP",
+      "Streamlit",
+      "Cybersecurity",
+    ],
+    repository:
+      "https://github.com/VasilkaVlaykova/ScamLens-Web-Browser-Application-for-Detecting-Spam-Contents",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=85",
+    overview:
+      "ScamLens explores how machine-learning and natural-language-processing techniques can help classify suspicious messages and links, with security awareness guidance alongside the prototype interface.",
+    problem:
+      "Rising cyber threats such as phishing emails, SMS scams (smishing), and Unicode homograph domain spoofing trick users into sharing credentials and financial information.",
+    role: "Lead researcher and developer — built prototype pipeline, dataset exploration, NLP text preprocessing, feature engineering, and the Streamlit interface.",
+    outcome:
+      "Functional machine-learning interactive prototype detecting spam triggers and suspicious URLs with homograph awareness, paired with clear threat explanations for non-technical users.",
+    details: [
+      "The repository documents dataset exploration and preprocessing, experimentation with machine-learning approaches, and a Streamlit-based prototype.",
+      "The project also documents research into Unicode spoofing and homograph detection. The repository describes it as a research and practical cybersecurity project in development.",
+    ],
+    statusNote: "Prototype and research project in development.",
+    isFeatured: true,
+  },
+  {
+    slug: "kompas",
+    number: "02",
+    title: "Online Book Store — Kompas",
+    summary:
+      "A relational database architecture and implementation project modeling multi-branch bookstore inventory, transactions, and customer relationships.",
+    category: "Database design · MySQL",
+    technologies: [
+      "MySQL",
+      "SQL",
+      "Database Design",
+      "Relational Modeling",
+      "ERD",
+    ],
+    repository: "https://github.com/VasilkaVlaykova/Online-Book-Store-Kompas",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
+    overview:
+      "Kompas is an end-to-end database design and implementation assignment built around a multi-entity online bookstore. It covers requirements analysis, conceptual entity-relationship modeling, relational normalization, and SQL implementation.",
+    problem:
+      "Organizing complex retail transactions across multiple branches, catalog editions, order statuses, inventory updates, and customer feedback without redundancy or data anomalies.",
+    role: "Database Designer & SQL Developer — designed normalization schemas (3NF), relational ER diagrams, constraints, and operational SQL queries.",
+    outcome:
+      "Robust, normalized MySQL schema handling books, branches, staff, orders, customer accounts, reviews, and secure transaction workflows.",
+    details: [
+      "The documented scenario includes books, customers, orders, payments, reviews, staff, managers, and branches.",
+      "The repository describes schema design, constraints, and implementation queries; it provides a comprehensive foundation for enterprise data modeling.",
+    ],
+    statusNote:
+      "University assignment based on a multi-entity bookstore scenario.",
+    isFeatured: true,
+  },
+  {
+    slug: "lima",
+    number: "03",
+    title: "LIMA",
+    summary:
+      "A solution-architecture portfolio project exploring a multimodal AI learning and media assistant.",
+    category: "System design · AI concept",
+    technologies: [
+      "Solution Architecture",
+      "Cloud Concepts",
+      "Multimodal AI",
+      "System Design",
+    ],
+    repository:
+      "https://github.com/VasilkaVlaykova/LIMA-Library-Intelligence-Managemant-Assistant",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=85",
+    overview:
+      "LIMA stands for Library Intelligence Management Assistant. Its repository presents a system-design and prototype concept for a multimodal interactive learning and media platform, spanning libraries, education, and research institutions.",
+    problem:
+      "Fragmented educational and research media access makes finding relevant multimedia assets and synthesized knowledge slow and cumbersome.",
+    role: "Systems Architect & Concept Designer — designed multi-tenant cloud concepts, high-level interaction models, and multimodal service boundaries.",
+    details: [
+      "The repository outlines a concept that combines text, image, audio, video, and touch-based interactions, with cloud and multi-tenant architecture ideas.",
+      "The repository identifies the current status as system design and prototype. Described capabilities represent a vetted solution concept and architecture exploration.",
+    ],
+    statusNote: "Solution architecture and prototype concept.",
+    isFeatured: true,
+  },
+  {
+    slug: "git-learning",
+    number: "04",
+    title: "Git Learning",
+    summary:
+      "A personal repository for practicing Git basics and commands with VS Code.",
+    category: "Learning · Version control",
+    technologies: ["Git", "GitHub", "VS Code"],
+    repository: "https://github.com/VasilkaVlaykova/git-learning",
+    image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=1400&q=85",
+    overview:
+      "Git Learning is a small practice repository used to explore Git basics, branching, and commands in VS Code.",
+    details: [
+      "The public repository contains practice notes and test changes related to learning version control.",
+      "It is a learning repository rather than a finished software product.",
+    ],
+    isFeatured: false,
+  },
+];

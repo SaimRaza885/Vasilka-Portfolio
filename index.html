@@ -13,6 +13,9 @@
     <meta name="twitter:title" content="Vasilka Vlaykova | Computing, Data &amp; AI" />
     <meta name="twitter:description" content="A London-based BSc Computing student exploring data science, artificial intelligence, and system design through projects." />
     <link rel="icon" type="image/svg+xml" href="/vasilka-mark.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <title>Vasilka Vlaykova | Computing, Data &amp; AI</title>
     <script>
       try {
@@ -20,14 +23,13 @@
         const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         document.documentElement.dataset.theme = saved === "light" || saved === "dark" ? saved : systemDark ? "dark" : "light";
         if (document.documentElement.dataset.theme === "dark") {
-          document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#151412");
+          document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#171513");
         }
       } catch { /* Keep the default light theme when storage is unavailable. */ }
     </script>
   </head>
   <body>
     <div id="root"></div>
-    <script src="/api/platform/config.js"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

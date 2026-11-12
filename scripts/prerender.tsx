@@ -35,7 +35,7 @@ try {
     html = html.replace(/(<meta name="twitter:description" content=")[^"]*("\s*\/>)/, `$1${safeDescription}$2`);
 
     if (route.path === "/") {
-      html = html.replace("</head>", '<link rel="preload" as="image" href="/manus-storage/async-images/ma7wkjDwavnnsXoN9sbyPk/image-1.webp" fetchpriority="high" />\n  </head>');
+      html = html.replace("</head>", '<link rel="preload" as="image" href="/image-1.webp" fetchpriority="high" />\n  </head>');
       await fs.writeFile(path.join(outputRoot, "index.html"), html);
     } else {
       const routeDirectory = path.join(outputRoot, route.path.replace(/^\//, ""));
