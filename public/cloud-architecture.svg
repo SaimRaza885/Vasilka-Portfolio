@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Cloud architecture</title>
+  <rect width="128" height="128" rx="24" fill="#eff6ff"/>
+  <path d="M38 91h53a19 19 0 0 0 3-37 31 31 0 0 0-58-4A21 21 0 0 0 38 91Z" fill="#38bdf8" stroke="#0369a1" stroke-width="5"/>
+  <path d="M44 104h40M50 113h28" stroke="#0369a1" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="51" cy="68" r="4" fill="#fff"/>
+  <circle cx="64" cy="62" r="4" fill="#fff"/>
+  <circle cx="77" cy="70" r="4" fill="#fff"/>
+  <path d="m54 67 7-3m7 1 6 3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</svg>

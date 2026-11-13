@@ -17,7 +17,7 @@ export const defaultFAQs: FAQItem[] = [
     question:
       "What are your primary technical strengths and programming stack?",
     answer:
-      "My primary programming languages are Python, SQL, C#, and Java, alongside modern web technologies. I specialize in data pipelines, machine learning with Streamlit and NLP, relational schema modeling (MySQL 3NF), and cloud solution architecture.",
+      "My primary technical strengths are Python, SQL, HTML, CSS, system design and architecture, prototype design, and Figma. I specialize in machine learning, NLP, deep learning, relational schema modeling, and software delivery through an agile SDLC approach.",
   },
   {
     question: "What was your responsibility at Regent College London?",

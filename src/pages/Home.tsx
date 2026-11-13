@@ -43,8 +43,8 @@ const proofMetrics = [
       </svg>
     ),
     label: "Core Stack",
-    value: "Python · SQL · C# · Java",
-    detail: "Streamlit, MySQL, Git, modern architecture",
+    value: "Python · SQL · HTML · CSS",
+    detail: "ML, NLP, DL, Figma, and modern architecture",
   },
   {
     icon: (
@@ -93,8 +93,8 @@ const proofMetrics = [
 const capabilities = [
   {
     title: "Data Analysis & Machine Learning",
-    desc: "Extracting actionable insights from messy datasets, building predictive NLP models, and deploying intuitive Streamlit interfaces.",
-    tools: ["Python", "Pandas", "NLP", "Machine Learning", "Streamlit"],
+    desc: "Extracting actionable insights from messy datasets, building machine-learning, NLP, and deep-learning models, and deploying intuitive interfaces.",
+    tools: ["Python", "Pandas", "Machine Learning", "NLP", "Deep Learning"],
     accentIcon: (
       <svg
         width="24"
@@ -115,7 +115,7 @@ const capabilities = [
   {
     title: "Database Architecture & Systems",
     desc: "Designing resilient 3NF relational schemas, indexing high-velocity transactional data, and crafting robust SQL queries.",
-    tools: ["MySQL", "SQL Queries", "Database Design", "C#", "Java"],
+    tools: ["MySQL", "SQL Queries", "Database Design", "System Design"],
     accentIcon: (
       <svg
         width="24"
@@ -135,8 +135,8 @@ const capabilities = [
   },
   {
     title: "Solution Architecture & Modern Web",
-    desc: "Transforming functional specifications into scalable cloud blueprints, modular multi-tenant systems, and accessible web experiences.",
-    tools: ["System Architecture", "Cloud Concepts", "Agile", "CISCO Basics"],
+    desc: "Transforming functional specifications into scalable architecture, thoughtful prototypes, and accessible web experiences through an agile delivery approach.",
+    tools: ["System Design & Architecture", "Prototype Design", "HTML", "CSS", "Figma", "Agile"],
     accentIcon: (
       <svg
         width="24"
@@ -318,8 +318,8 @@ export default function Home() {
             </p>
             <p>
               Her work combines analytical thinking with hands-on experience
-              across Python, SQL, C#, Java, JavaScript, databases, dashboards,
-              and scalable technology concepts.
+              across Python, SQL, HTML, CSS, machine learning, NLP, deep
+              learning, databases, prototypes, and scalable system concepts.
             </p>
             <div className="text-actions">
               <a className="action-button action-button--primary" href="/about/">Read more about Vasilka →</a>

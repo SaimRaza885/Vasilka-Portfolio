@@ -4,7 +4,7 @@ import { useInView } from "../hooks/useInView";
 const heroStats = [
   { value: "Jan 2023", label: "Started Degree" },
   { value: "3+ Years", label: "Project Internship" },
-  { value: "5 Languages", label: "Across the Stack" },
+  { value: "10+ Focus Areas", label: "Across the Stack" },
 ];
 
 const journey = [
@@ -39,23 +39,32 @@ const journey = [
 
 const skillGroups = [
   {
-    title: "Programming Languages",
+    title: "Core Technologies",
     tools: [
       { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
       { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
-      { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" },
-      { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
-      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
     ],
   },
   {
     title: "Data Science & AI",
     tools: [
       { name: "Data Analysis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" },
-      { name: "NLP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/huggingface/huggingface-original.svg" },
       { name: "Machine Learning", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" },
+      { name: "NLP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/huggingface/huggingface-original.svg" },
+      { name: "Deep Learning", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" },
       { name: "Streamlit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" },
       { name: "Statistical Modeling", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" },
+    ],
+  },
+  {
+    title: "Design & Prototyping",
+    tools: [
+      { name: "System Design & Architecture", icon: "/system-architecture.svg" },
+      { name: "Prototype Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" },
+      { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" },
+      { name: "UI/UX Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" },
     ],
   },
   {
@@ -68,12 +77,13 @@ const skillGroups = [
     ],
   },
   {
-    title: "Infrastructure & Methods",
+    title: "Delivery & Methods",
     tools: [
-      { name: "Cloud Architecture", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-      { name: "CISCO Networking", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cisco/cisco-original.svg" },
+      { name: "Cloud Architecture", icon: "/cloud-architecture.svg" },
+      { name: "CISCO Networking", icon: "/cisco-networking.svg" },
       { name: "Git / GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
-      { name: "Agile / Scrum", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" },
+      { name: "Software Development Life Cycle", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" },
+      { name: "Agile Approach", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" },
     ],
   },
 ];
@@ -265,7 +275,8 @@ export default function About() {
                 Technical Competencies
               </h2>
               <p className="about-section-sub">
-                The languages, frameworks, and systems I build with every day.
+                The technologies, design practices, and delivery methods I use
+                to turn ideas into useful systems.
               </p>
             </div>
           </div>
