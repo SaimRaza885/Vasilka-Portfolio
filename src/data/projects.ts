@@ -7,6 +7,8 @@ export type Project = {
   technologies: string[];
   repository: string;
   image?: string;
+  logo?: string;
+  imageFit?: "cover" | "contain";
   overview: string;
   details: string[];
   statusNote?: string;
@@ -84,27 +86,35 @@ export const projects: Project[] = [
     number: "03",
     title: "LIMA",
     summary:
-      "A solution-architecture portfolio project exploring a multimodal AI learning and media assistant.",
-    category: "System design · AI concept",
+      "A cloud-native multimodal AI platform concept helping libraries and bookstores make book discovery more interactive through AI recommendations, book trailers, and connected devices.",
+    category: "System design · Cloud architecture · AI concept",
     technologies: [
-      "Solution Architecture",
-      "Cloud Concepts",
       "Multimodal AI",
-      "System Design",
+      "Google Cloud Platform",
+      "Anthos & Kubernetes",
+      "REST APIs",
+      "Multi-Tenant Architecture",
+      "Figma",
     ],
     repository:
       "https://github.com/VasilkaVlaykova/LIMA-Library-Intelligence-Managemant-Assistant",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=85",
+    image: "/lima-logo.png",
+    logo: "/lima-logo.png",
     overview:
-      "LIMA stands for Library Intelligence Management Assistant. Its repository presents a system-design and prototype concept for a multimodal interactive learning and media platform, spanning libraries, education, and research institutions.",
+      "LIMA (Library Intelligence Management Assistant) is a conceptual multimodal AI interactive learning and media platform for libraries, bookstores, schools, publishers, families, and readers. It is designed to make book discovery and learning more engaging by combining book metadata, recommendations, AI-generated trailers, reading support, and interactive media in one connected ecosystem.",
     problem:
-      "Fragmented educational and research media access makes finding relevant multimedia assets and synthesized knowledge slow and cumbersome.",
-    role: "Systems Architect & Concept Designer — designed multi-tenant cloud concepts, high-level interaction models, and multimodal service boundaries.",
+      "Libraries and bookstores need more engaging ways to help people discover books, while schools and families need accessible reading experiences that connect physical books with digital learning. Separate devices, content systems, and services can make this experience fragmented and difficult to manage.",
+    role: "Systems Architect & Concept Designer — translated the product vision into business requirements, user journeys, device concepts, REST API boundaries, cloud architecture, multi-tenant services, database structures, security considerations, and high-fidelity prototypes.",
+    outcome:
+      "A complete solution-architecture portfolio concept showing how libraries, bookstores, publishers, educators, and readers could connect through a secure, scalable platform. The design supports B2B and B2C services alongside SaaS, HaaS, and GaaS offerings.",
     details: [
-      "The repository outlines a concept that combines text, image, audio, video, and touch-based interactions, with cloud and multi-tenant architecture ideas.",
-      "The repository identifies the current status as system design and prototype. Described capabilities represent a vetted solution concept and architecture exploration.",
+      "A customer can scan a book at an interactive library or bookstore kiosk and watch an AI-generated trailer based on the book summary, helping them decide whether to explore or purchase it.",
+      "The wider device ecosystem includes a website portal for organisations, interactive kiosks, children's AI reading displays, and the LIMA AI Tablet. These devices support text, images, audio, video, and touch-based interactions.",
+      "The proposed platform connects clients and devices through secure REST APIs and an API Gateway. Its services include authentication, device management, content delivery, recommendations, analytics, subscriptions, and publisher metadata exchange.",
+      "The cloud design uses Google Cloud Platform services including Google Kubernetes Engine, Anthos Service Mesh, Cloud SQL, Firestore, Cloud Storage, IAM, Cloud Armor, and Vertex AI, with a hybrid-cloud approach for sensitive tenant and user data.",
+      "The repository presents LIMA as a system design and prototype portfolio project, not a production-ready deployed platform. The architecture demonstrates how a multi-tenant AI ecosystem could scale across libraries, bookstores, education, and home learning.",
     ],
-    statusNote: "Solution architecture and prototype concept.",
+    statusNote: "Conceptual solution architecture and prototype design; not a production deployment.",
     isFeatured: true,
   },
   {
