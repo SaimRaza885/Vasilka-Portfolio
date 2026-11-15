@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "https://github.com/VasilkaVlaykova/ScamLens-Web-Browser-Application-for-Detecting-Spam-Contents",
     liveDemo:
       "https://scamlens-web-browser-application-for-detecting-spam-contents-e.streamlit.app/",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=85",
+    image: "/scamlens-logo.jpg",
     overview:
       "ScamLens is a deployed Streamlit web application that uses machine-learning and natural-language-processing techniques to classify suspicious messages and links, assess potential risks, and provide security awareness guidance before users interact with potentially harmful content.",
     problem:
