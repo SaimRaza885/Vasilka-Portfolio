@@ -6,6 +6,7 @@ export type Project = {
   category: string;
   technologies: string[];
   repository: string;
+  liveDemo?: string;
   image?: string;
   logo?: string;
   imageFit?: "cover" | "contain";
@@ -24,7 +25,7 @@ export const projects: Project[] = [
     number: "01",
     title: "ScamLens",
     summary:
-      "A machine-learning web platform concept for identifying suspicious SMS messages, phishing emails, and malicious URLs.",
+      "A deployed Streamlit machine-learning web application for identifying suspicious SMS messages, phishing emails, and malicious URLs.",
     category: "Machine learning · Streamlit",
     technologies: [
       "Python",
@@ -35,19 +36,21 @@ export const projects: Project[] = [
     ],
     repository:
       "https://github.com/VasilkaVlaykova/ScamLens-Web-Browser-Application-for-Detecting-Spam-Contents",
+    liveDemo:
+      "https://scamlens-web-browser-application-for-detecting-spam-contents-e.streamlit.app/",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=85",
     overview:
-      "ScamLens explores how machine-learning and natural-language-processing techniques can help classify suspicious messages and links, with security awareness guidance alongside the prototype interface.",
+      "ScamLens is a deployed Streamlit web application that uses machine-learning and natural-language-processing techniques to classify suspicious messages and links, assess potential risks, and provide security awareness guidance before users interact with potentially harmful content.",
     problem:
       "Rising cyber threats such as phishing emails, SMS scams (smishing), and Unicode homograph domain spoofing trick users into sharing credentials and financial information.",
-    role: "Lead researcher and developer — built prototype pipeline, dataset exploration, NLP text preprocessing, feature engineering, and the Streamlit interface.",
+    role: "Lead researcher and developer — built the data pipeline, explored and preprocessed datasets, applied NLP text processing and feature engineering, experimented with detection models, and created the Streamlit interface.",
     outcome:
-      "Functional machine-learning interactive prototype detecting spam triggers and suspicious URLs with homograph awareness, paired with clear threat explanations for non-technical users.",
+      "A live machine-learning web application that detects spam and phishing indicators, investigates suspicious URLs with Unicode homograph awareness, and provides clear threat explanations for non-technical users.",
     details: [
-      "The repository documents dataset exploration and preprocessing, experimentation with machine-learning approaches, and a Streamlit-based prototype.",
-      "The project also documents research into Unicode spoofing and homograph detection. The repository describes it as a research and practical cybersecurity project in development.",
+      "The repository documents dataset exploration and preprocessing, experimentation with machine-learning approaches, detection models, testing, and the deployed Streamlit application.",
+      "The project also documents research into Unicode spoofing and homograph detection, alongside user-focused security awareness guidance.",
     ],
-    statusNote: "Prototype and research project in development.",
+    statusNote: "Deployed Streamlit application with ongoing research and development.",
     isFeatured: true,
   },
   {
@@ -87,7 +90,7 @@ export const projects: Project[] = [
     title: "LIMA",
     summary:
       "A cloud-native multimodal AI platform concept helping libraries and bookstores make book discovery more interactive through AI recommendations, book trailers, and connected devices.",
-    category: "System design · Cloud architecture · AI concept",
+    category: "System design · Cloud AI",
     technologies: [
       "Multimodal AI",
       "Google Cloud Platform",

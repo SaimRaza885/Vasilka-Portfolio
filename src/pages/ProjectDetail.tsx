@@ -119,8 +119,18 @@ export default function ProjectDetail({ project }: { project: Project }) {
       )}
 
       <div className="detail-actions">
+        {project.liveDemo && (
+          <a
+            className="action-button action-button--primary"
+            href={project.liveDemo}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Try Live Demo ↗
+          </a>
+        )}
         <a
-          className="action-button action-button--primary"
+          className="action-button action-button--secondary"
           href={project.repository}
           target="_blank"
           rel="noreferrer"
